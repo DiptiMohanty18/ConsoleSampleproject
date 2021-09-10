@@ -2,13 +2,30 @@
 
 namespace ConsoleSampleproject
 {
+    public struct Employee
+    {
+        public int age;
+        public String name;
+        public bool isEmployee;
+
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("How are you doing?");
-            Console.ReadKey();
+            //int age = 27;
+            //String name = "Dipti";
+            //bool isEmployee = true;
+            
+            Employee emp;
+
+            emp.age = 27;
+            emp.name = "Dipti Mohanty";
+            emp.isEmployee = false;
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(emp.name + " is " + emp.age + " years old");
+            Console.WriteLine("Is she an employee of Dell?" + (emp.isEmployee ? "Yes" : "No"));
         }
     }
 }
